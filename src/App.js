@@ -2,9 +2,11 @@ import React from 'react';
 import NewMessageForm from './components/NewMessageForm'
 
 const App = () => {
+  const handleSend = newMessage => {};
+
   return (
     <div>
-      <NewMessageForm />
+      <NewMessageForm onSend={handleSend}/>
     </div>
   )
 } 

@@ -9,6 +9,8 @@ describe('Creating a message', () => {
             .click(); 
 
         cy.get('[data-testid="messageText"]')
-            .should('have.value', 'New message');
+            .should('have.value', '');
+
+        cy.contains('New message')
     })
 })
