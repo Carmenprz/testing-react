@@ -10,7 +10,7 @@ describe('<NewMessageForm />', () => {
         let sendHandler; 
 
         beforeEach( () => {
-            sendHandler = jest.fn().mockName('sendHandler');
+            sendHandler = jest.fn().mockName('sendHandler'); //mockeamos function 'sendHandler'
             ({ getByTestId } = render(<NewMessageForm onSend={sendHandler}/>)); 
 
             userEvent.type(
