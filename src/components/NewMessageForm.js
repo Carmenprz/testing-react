@@ -1,15 +1,15 @@
 import React, { useState } from 'react';
 
 const NewMessageForm = ({ onSend }) => {
-    const [inputText, setInputText] = useState(''); //Declaramos una variable de estado llamada inputText y le asignamos '' (valor vacío)
+    const [inputText, setInputText] = useState(''); 
 
     const handleTextChange = event => {
-        setInputText(event.target.value); //muestra el valor del input que escribimos
+        setInputText(event.target.value); 
     }; 
 
     const handleSend = () => {
         onSend(inputText);
-        setInputText(''); //limpiamos el input text cuando hacemos click
+        setInputText(''); 
     }
 
     return (
@@ -18,7 +18,7 @@ const NewMessageForm = ({ onSend }) => {
                 type="text"
                 data-testid="messageText"
                 value={inputText}
-                onChange={handleTextChange} //cuando el campo de un formulario cambia, se lanza el evento
+                onChange={handleTextChange} 
             />
             <button
                 data-testid="sendButton"
